@@ -3,8 +3,10 @@
   "version": "4.11.0.0",
   "schemaVersion": 2,
   "kind": "HeaderOnlyLib",
-  "description": "TODO: one-line description of cppzmq",
-  "dependencies": {},
+  "description": "Header-only C++ binding for libzmq",
+  "dependencies": {
+    "libzmq": "^4.3.5.0"
+  },
   "build": {
     "system": "cmake",
     "configs": [
@@ -13,7 +15,9 @@
       "RelWithDebInfo",
       "MinSizeRel"
     ],
-    "configure": [],
+    "configure": [
+      "-DCPPZMQ_BUILD_TESTS=OFF"
+    ],
     "installDir": "install"
   }
 }
